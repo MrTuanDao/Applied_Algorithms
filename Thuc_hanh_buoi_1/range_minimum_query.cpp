@@ -1,5 +1,7 @@
 // ý tưởng là lưu trữ một bảng, cho phép lấy giá trị min từ i tới i + (2 mũ j) - 1
 // vậy ta tạo mảng có n cột, có logarit cơ số 2 của n hàng
+// Time: O(n) + m*O(1)
+// Storage: O(n)
 
 #include <bits/stdc++.h>
 using namespace std;
