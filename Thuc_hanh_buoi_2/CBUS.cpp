@@ -26,13 +26,6 @@ bool UCV(int k, int i){// kiểm tra xem i có phù hợp để điền vào coo
     }       
 }
 
-void debugger(){
-    for(int i = 0; i <= 2*n + 1; i++){
-        cout << coor[i] << ' ';
-    }
-    cout<<endl;
-}
-
 void Try(int k){// thêm điểm dừng cho bước thứ k
     // Điều kiện dừng là xe bus đi được 2*(n+1) bước
     if (k == 2*n+1) {
