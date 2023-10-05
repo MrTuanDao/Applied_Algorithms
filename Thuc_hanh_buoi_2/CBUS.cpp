@@ -2,7 +2,7 @@
 Dao Quoc Tuan 20210891
 Duyet toan bo, nhanh can, cu nhu form cho san ma them code vao
 */
-// nhánh cận đạt 4/5 test case trên hustack
+// nhánh cận đạt 5/5 test case trên hustack
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -41,7 +41,7 @@ void Try(int k){// thêm điểm dừng cho bước thứ k
             if(i<=n) seats--;
             else seats++;
             
-            if(distances < shortest) Try(k+1);
+            if(distances + (2 * n - k)< shortest) Try(k+1);
             
             // Trả các biến trạng thái về trạng thái cũ
             coor[k] = 0;
