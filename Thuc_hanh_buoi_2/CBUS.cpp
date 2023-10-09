@@ -1,6 +1,9 @@
 /*
 Dao Quoc Tuan 20210891
-Duyet toan bo, nhanh can, cu nhu form cho san ma them code vao
+Áp dụng phương pháp nhánh cận
+Điều quan trọng nhất khi sử dụng phương pháp này đó là thiết kế hàm UCV, cũng tức là thiết kế cách duyệt sao cho hợp lý
+Ý tưởng của tôi là kiểm tra điếm đến đã được thăm chưa, nếu điểm đến nhỏ hơn n thì còn ghế trống không, 
+nếu điểm đến lớn hơn n thì đã có hành khách (k - n) trên xe hay chưa.
 */
 // nhánh cận đạt 5/5 test case trên hustack
 #include <bits/stdc++.h>
