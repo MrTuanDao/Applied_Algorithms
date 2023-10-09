@@ -1,4 +1,8 @@
-// check TSP with Precedence Constraint
+/* check TSP with Precedence Constraint
+Dao Quoc Tuan 20210891
+Tại đầu mỗi lặp kiểm tra phần tử, ta kiểm tra xem tất cả những precedence của nó đã đi qua chưa, nếu rồi
+Cập nhật quãng đường và gán đã đi qua nó
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
