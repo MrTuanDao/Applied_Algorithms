@@ -3,7 +3,7 @@
 # include <bits/stdc++.h>
 using namespace std;
 
-const int MAXN = 15;
+const int MAXN = 30;
 int C[MAXN][MAXN];
 int n, cmin, fcur, fopt = INT_MAX;
 int x[MAXN], xopt[MAXN];
@@ -19,15 +19,15 @@ void input(){
 }
 
 int TRY(int k){
-    for(int i = 2; i <= n; i++)}{
+    for(int i = 2; i <= n; i++){
         if(!visited[i]){
             x[k] = i;
             visited[i] = true;
             fcur += C[x[k-1]][i];
             if (k == n){
                 if(fcur + C[i][1] < fopt){
-                    fopt = fcur + C[i]1];
-                    for(int j = 1; j <= n; j++) xopt[j] = x[j];
+                    fopt = fcur + C[i][1];
+                    // for(int j = 1; j <= n; j++) xopt[j] = x[j];
                 }
             }
             else if (fcur + (n - k + 1) * cmin < fopt) TRY(k + 1);
@@ -43,8 +43,8 @@ int main(){
     visited[1] = true;
     TRY(2);
     cout << fopt << endl;
-    for(int i = 1; i <= n; i++){
-        cout << xopt[i] << "->" ;
-    }
+    // for(int i = 1; i <= n; i++){
+        // cout << xopt[i] << "->" ;
+    // }
     return 0;
 }
