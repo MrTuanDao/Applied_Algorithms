@@ -13,11 +13,11 @@ bool checkParen(string target){
     
     for(int i = 1 ; i < target.size() ; i ++){
         char parenRight = target[i];
-        if(parenthesis.find(parenRight) == parenthesis.end()){
+        if(parenthesis.find(parenRight) == parenthesis.end()){ // nếu là dấu đóng ngoặc thì so nó với top stack
             if(mystack.empty()) return false;
             char parenLeft = mystack.top(); mystack.pop();
             if(parenthesis[parenLeft] != parenRight) return false;
-        }
+        } // nếu là dấu mở ngoặc thì append vào
         else mystack.push(parenRight);
     }
     return !mystack.size();
