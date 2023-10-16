@@ -13,7 +13,7 @@ const double PI = M_PI;
 double EPS = 1e-4,
        lo, hi;
 int n, f;
-double min_area = DBL_MAX;
+double max_area = 0;
 double area[MAXN];
 
 bool P(double x){ // neu chia duoc so banh cho F + 1 nguoi thi la DUNG
@@ -32,10 +32,10 @@ int main(){
     for(int i = 1; i <= n; i++) {
         int x;
         cin >> x; area[i] = PI * x * x;
-        min_area = min(min_area, area[i]);
+        max_area = max(max_area, area[i]);
     }
     
-    lo = 0; hi = min_area;
+    lo = 0; hi = max_area;
     while(hi - lo > EPS){
         double mid = (lo + hi) / 2.0;
         if (P(mid) == true){
