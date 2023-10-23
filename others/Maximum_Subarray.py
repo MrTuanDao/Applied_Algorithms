@@ -1,7 +1,7 @@
 '''
 Bài toán tìm dãy con có tổng lớn nhất
--2,1,-3,4,-1,2,1,-5,4
-Có tổng lớn nhất là 6 vì 4,-1,2,1
+-2 1 -3 4 -1 2 1 -5 4
+Có tổng lớn nhất là 6 vì 4 -1 2 1
 
 Gợi ý: Sliding Windows
 '''
