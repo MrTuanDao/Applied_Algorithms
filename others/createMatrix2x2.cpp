@@ -20,7 +20,7 @@ myMatrix* multi(myMatrix* m1, myMatrix* m2){
     temp->a1 = m1->a1 * m2->a1 + m1->a2 * m2->a3;
     temp->a2 = m1->a1 * m2->a2 + m1->a2 * m2->a4;
     temp->a3 = m1->a3 * m2->a1 + m1->a4 * m2->a3;
-    temp->a1 = m1->a3 * m2->a2 + m1->a4 * m2->a4;
+    temp->a4 = m1->a3 * m2->a2 + m1->a4 * m2->a4;
     return temp;
 }
 
