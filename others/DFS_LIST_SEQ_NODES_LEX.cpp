@@ -1,9 +1,10 @@
+// Dao Quoc Tuan 20210891
 #include<bits/stdc++.h>
 using namespace std;
 
 const int N = 100;
 int n, m;
-set<int> mySet[N];
+set<int> mySet[N]; // lưu trữ tập các nút kề
 int visited[N];
 
 int main(){
@@ -14,7 +15,7 @@ int main(){
         mySet[y].insert(x);
     }
     
-    for(int i = 1; i <= n; i++){
+    for(int i = 1; i <= n; i++){ // lặp qua từng nút và dfs từ nút đó
         if(visited[i]) continue;
         else{
             // dfs
