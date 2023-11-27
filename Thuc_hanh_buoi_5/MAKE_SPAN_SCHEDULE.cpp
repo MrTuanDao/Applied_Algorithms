@@ -27,6 +27,7 @@ void input() {
     
 }
 
+// thực hiện duyệt ngược từ dưới lên, sau đó ta đảo lại mảng order sẽ lấy được thứ tự toposort
 void topo_sort(int u) {
     visited[u] = true;
     
