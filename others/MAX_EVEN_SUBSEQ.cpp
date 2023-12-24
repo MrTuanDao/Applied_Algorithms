@@ -1,29 +1,39 @@
-/*
-Max Even SubSequence
-Tìm dãy con có tổng chẵn là lớn nhất
-Đạt 4/5 test case
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 1e6 + 10;
-int n, a[N];
 
-//Slicing window
+#define int long long
 
-int main(){
-    cin >> n;
-    for(int i = 1; i <= n; i++) cin >> a[i];
-    
-    long long curSum = 0, ans = (a[1] % 2 == 0) ? a[1] : INT_MIN;
-    for(int i = 1; i <= n; i++){
-        if(curSum < 0) curSum = 0;
-        curSum += a[i];
-        if(curSum % 2 == 0) ans = max(ans, curSum);
+const int INF = 1e12;
+const int N = 2e6;
+int a[N];
+int pre[N] = {0}, minLe = 1e17 + 1, minChan = 0;
+int res = 0;
+
+void solve () {
+    int n; cin >> n; 
+
+    for (int i = 1; i <= n; i++) {
+        cin >> a[i];
+        
+        pre[i] = pre[i - 1] + a[i];
+        
+        if ( (pre[i] + INF) % 2 == 0 ) {
+            res = max(res, pre[i] - minChan);
+            minChan = min(minChan, pre[i]);
+        }
+        else {
+            res = max(res, pre[i] - minLe);
+            minLe = min(minLe, pre[i]);
+        }
     }
     
-    cout << ans;
+    cout << res << endl;
     
+    
+}
+
+signed main() {
+    solve();
     return 0;
 }
